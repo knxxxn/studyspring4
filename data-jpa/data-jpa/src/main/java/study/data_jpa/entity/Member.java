@@ -3,6 +3,8 @@ package study.data_jpa.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+@NamedEntityGraph(name = "Member.all", attributeNodes =
+@NamedAttributeNode("team"))
 @Entity
 @Getter @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
