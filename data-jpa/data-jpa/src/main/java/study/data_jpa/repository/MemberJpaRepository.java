@@ -72,4 +72,6 @@ public class MemberJpaRepository {
                 .executeUpdate();
         return resultCount;
     }
+
+
 }
