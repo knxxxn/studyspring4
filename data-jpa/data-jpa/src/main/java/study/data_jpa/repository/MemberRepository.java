@@ -13,7 +13,7 @@ import study.data_jpa.entity.Member;
 import java.util.List;
 import java.util.Optional;
 
-public interface MemberRepository extends JpaRepository<Member, Long>, MemberRepositoryCustom  {
+public interface MemberRepository extends JpaRepository<Member, Long>, JpaSpecificationExecutor<Member>  {
     List<Member> findByUsernameAndAgeGreaterThan(String username, int age);
     Page<Member> findByAge(int age, Pageable pageable);
 
